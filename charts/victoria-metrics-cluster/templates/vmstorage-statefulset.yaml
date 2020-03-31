@@ -134,6 +134,10 @@ spec:
         storageClassName: "{{ .Values.vmstorage.persistentVolume.storageClass }}"
       {{- end }}
       {{- end }}
+      {{- if .Values.vmstorage.persistentVolume.selector }}
+        selector:
+{{ toYaml .Values.vmstorage.persistentVolume.selector | indent 10 }}
+      {{- end }}
 {{- else }}
       volumes:
         - name: vmstorage-volume

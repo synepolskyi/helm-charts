@@ -242,8 +242,8 @@ vmstorage:
     annotations: {}
 
     ## Requires vmstorage.persistentVolume.enabled: true
-    ## If defined, PVC must be created manually before volume will be bound
-    existingClaim: ""
+    ## If defined, PV must be created manually before volume will be bound
+    selector: {}
 
     ## Vmstorage data Persistent Volume mount root path
     ##
